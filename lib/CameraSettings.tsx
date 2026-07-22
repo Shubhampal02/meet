@@ -38,7 +38,7 @@ export function CameraSettings() {
     return cameraTrack
       ? { participant: localParticipant, publication: cameraTrack, source: Track.Source.Camera }
       : undefined;
-  }, [localParticipant, cameraTrack]);
+  }, [localParticipant, cameraTrack]);  
 
   const selectBackground = (type: BackgroundType, imagePath?: string) => {
     setBackgroundType(type);
@@ -78,7 +78,7 @@ export function CameraSettings() {
       <section className="lk-button-group">
         <TrackToggle source={Track.Source.Camera}>Camera</TrackToggle>
         <div className="lk-button-group-menu">
-          <MediaDeviceMenu kind="videoinput" />
+          <div>Camera Devices</div>
         </div>
       </section>
 
